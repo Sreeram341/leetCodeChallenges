@@ -34,9 +34,25 @@ def makes10(a, b):
         return False
 
 def near_hundred(n):
-    if abs(100) - n <=10 or abs(200-n)<=10:
+    if abs(100 - n) <= 10 or abs(200-n) <= 10:
+        print(abs(100) - n)
         return True
     else:
         return False
 
-print(near_hundred(111))
+def pos_neg(a, b, negative):
+    if negative == True:
+        if a < 0 and b < 0:
+            return True
+        else:
+            return False
+    else:
+        if a<0 and b<0:
+            return False
+        elif a>0 and b>0:
+            return False
+        else:
+            return True
+
+
+print(pos_neg(1, 1, False))
