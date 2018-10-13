@@ -55,4 +55,37 @@ def pos_neg(a, b, negative):
             return True
 
 
-print(pos_neg(1, 1, False))
+def not_string(str):
+    s =str.split(" ")
+    if len(s) == 1:
+        if s[0] !="not":
+            return "not " + str
+        else:
+            return str
+    elif s[0]!="not":
+        return "not "+str
+    else:
+        return str
+
+def missing_char(str, n):
+    retStrLis = list(str)
+    retStrLis.pop(n)
+    return "".join(retStrLis)
+
+def front_back(str):
+    strLis = list(str)
+    fullLen=len(strLis)
+    if fullLen>=2 and fullLen<=3:
+        strLis.reverse()
+        return "".join(strLis)
+    elif fullLen>3:
+        last = strLis[0]
+        first = strLis[fullLen-1]
+        strLis.pop(0)
+        strLis.pop(fullLen-2)
+        strLis.insert(0,first)
+        strLis.insert(fullLen-1, last)
+        return "".join(strLis)
+    else:
+        return str
+
