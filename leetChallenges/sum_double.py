@@ -89,3 +89,12 @@ def front_back(str):
     else:
         return str
 
+def front3(str):
+    strLen = len(str)
+    if strLen>=3:
+        return str[0:3]*3
+    else:
+        return str*3
+
+
+print(front3("Java"))
