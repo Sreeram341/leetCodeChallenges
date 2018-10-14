@@ -8,4 +8,4 @@ At least 1 character from [ _ or @ or $ ].
 
 import re
 
-print(re.findall('(?=[^_@$])(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}',"sreeramP_$6"))
+print(re.findall('(?=[^_@$])(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}', "sreeramP_$6"))
